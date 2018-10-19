@@ -40,11 +40,9 @@ public class ResultPlay {
             System.out.println("- - - - - - - - -");
             beginTime = System.nanoTime();
             test.action();
-            test.action();
-            test.action();
             StringBuilder playLine = new StringBuilder();
             playLine.append("编号：").append(count-1).append(" 测试完成：\n");
-            playLine.append("运行时间：").append((System.nanoTime() - beginTime)/(1000*3)).append(" ms\n\n");
+            playLine.append("运行时间：").append((System.nanoTime() - beginTime)/1000).append(" ms\n\n");
             System.out.println("- - - - - - - - -");
             System.out.println(playLine);
             System.out.println(LINE);

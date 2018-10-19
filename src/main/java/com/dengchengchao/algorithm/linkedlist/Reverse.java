@@ -2,6 +2,7 @@ package com.dengchengchao.algorithm.linkedlist;
 
 import com.dengchengchao.algorithm.util.ResultPlay;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -52,7 +53,7 @@ public class Reverse {
 
     //通过栈记录先进后出规则，先放入节点，再取出即可
     static Node reverseByStack(Node node) {
-        LinkedList<Node> stack = new LinkedList<>();
+        ArrayDeque<Node> stack = new ArrayDeque<>(100000);
         for (Node h = node; h != null; h = h.next) {
             stack.push(h);
         }
