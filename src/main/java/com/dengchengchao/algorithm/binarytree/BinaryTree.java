@@ -107,6 +107,13 @@ public class BinaryTree {
         }
     }
 
+    /**
+     * 层次遍历：这里可以看出来，这里需要的按顺序访问节点
+     * 必须需要先访问a节点，然后依次访问a的子节点，然后依次访问a的子节点的子节点。
+     *
+     * 这样的顺序就恰好的是队列：依次将访问的到的节点放入队列中，然后再依次访问节点和子节点即可。
+     *
+     */
     static void levelTraversal(TreeNode head) {
         LinkedList<TreeNode> queque = new LinkedList<>();
         queque.offer(head);
